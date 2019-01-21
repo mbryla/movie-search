@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import SearchForm from './SearchForm';
+import MoviesList from './MoviesList';
+
 class App extends Component {
+
   render() {
     return (
       <div className="App">
         <header className="search">
+          <SearchForm/>
         </header>
         <main>
-          <ul className="movies">
-            <li className="movie"></li>
-            <li className="movie"></li>
-            <li className="movie"></li>
-            <li className="movie"></li>
-            <li className="movie"></li>
-            <li className="movie"></li>
-            <li className="movie"></li>
-            <li className="movie"></li>
-          </ul>
+          <MoviesList/>
         </main>
       </div>
     );
