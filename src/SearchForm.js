@@ -37,6 +37,12 @@ class SearchForm extends PureComponent {
     });
   }
 
+  onKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      this.onSearch();
+    }
+  }
+
   onSearch = () => {
     const { dispatchFetchMovie } = this.props;
     const { title, releaseYear } = this.state;
@@ -45,12 +51,19 @@ class SearchForm extends PureComponent {
 
   render() {
     return (
-      <div>
-        <label htmlFor="search-title">Title</label>
-        <input id="search-title" name="title" type="text" value={this.state.title} onChange={this.onTitleChange}/>
-        <label htmlFor="search-year">Release Year</label>
-        <input id="search-year" name="release year" type="number" min="1900" max="2019" value={this.state.releaseYear} onChange={this.onYearChange}/>
-        <button type="button" onClick={this.onSearch}>search</button>
+      <div className="search">
+        <div>
+          <label htmlFor="search-title">Title</label>
+          <input id="search-title" name="title" type="text" value={this.state.title} onChange={this.onTitleChange} onKeyPress={this.onKeyPress}/>
+        </div>
+        <div>
+          <label htmlFor="search-year">Release Year</label>
+          <input id="search-year" name="release year" type="number" min="1900" max="2019" value={this.state.releaseYear} onChange={this.onYearChange} onKeyPress={this.onKeyPress}/>
+        </div>
+        <div>
+          <label>&nbsp;</label>
+          <button type="button" onClick={this.onSearch}>search</button>
+        </div>
       </div>
     );
   }

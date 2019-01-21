@@ -6,7 +6,34 @@
 
 .search {
   height: 100px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
   border: 1px solid green; /* TODO REMOVE */
+}
+
+.search div {
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.search div label, button {
+  text-transform: uppercase;
+}
+
+.search div input {
+  height: 30px;
+  line-height: 30px;
+  font-size: 30px;
+  /* width: 30%; */
+}
+
+.search div button {
+  height: 36px;
+  line-height: 30px;
+  font-size: 30px;
 }
 
 ul.movies {
