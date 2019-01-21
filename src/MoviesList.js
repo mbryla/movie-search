@@ -19,7 +19,13 @@ class MoviesList extends PureComponent {
   renderMovies() {
     const { movies } = this.props;
     console.log(movies);
-    return movies.map(movie => <li key={movie.imdbID} className="movie">{movie.Title} - {movie.Year}</li>);
+    return movies.map(movie => (
+      <li key={movie.imdbID} className="movie">
+        <img src={movie.Poster}/>
+        <h1>{movie.Title}</h1>
+        <h2>{movie.Year}</h2>
+      </li>)
+    );
   }
 
   render() {
