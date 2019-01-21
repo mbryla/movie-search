@@ -1,3 +1,7 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .container {
   display: flex;
   flex-flow: column nowrap;
@@ -8,6 +12,10 @@
   display: flex;
   flex-flow: row;
   justify-content: space-around;
+
+  background-color: #8CDBC7;
+  color: #0B3549;
+  border-bottom: 10px solid #0B3549;
 }
 
 .search div {
@@ -33,6 +41,9 @@
   height: 1.8em;
   line-height: 1.6em;
   font-size: 1.6em;
+
+  background-color: #F2584D;
+  color: white;
 }
 
 ul.movies {
@@ -54,6 +65,9 @@ ul.movies li {
   border-radius: 15px;
   text-align: center;
   text-overflow: ellipsis;
+
+  background-color: #FCFAFA;
+  color: #0B3549;
 }
 
 ul.movies li h1 {
