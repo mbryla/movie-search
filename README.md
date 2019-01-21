@@ -14,6 +14,7 @@ This project was created in 3 hours as a proof of concept on how such an applica
 - test against different browsers
 - accessibility improvements
 
-## features
+## features to be completed
 - create a preview page allowing you to select a movie card and see its details
-- display suggestions: when the user is typing, requests can be sent to the API to request movies that match the title that has been entered so far; those movies can be displayed as suggestions for faster selection
+- use pagination - when the search has been initiated and there is more than 10 results, browse through all the pages. The API module is already prepared to do so, just need to code it in actions.js
+- display suggestions: when the user is typing, requests can be sent to the API to request movies that match the title that has been entered so far; those movies can be displayed as suggestions for faster selection - here we can use just a single page
