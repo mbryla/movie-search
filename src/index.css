@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-flow: column nowrap;
-  border: 1px solid red; /* TODO REMOVE */
 }
 
 .search {
@@ -9,7 +8,6 @@
   display: flex;
   flex-flow: row;
   justify-content: space-around;
-  border: 1px solid green; /* TODO REMOVE */
 }
 
 .search div {
@@ -21,19 +19,20 @@
 
 .search div label, button {
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .search div input {
-  height: 30px;
-  line-height: 30px;
-  font-size: 30px;
-  /* width: 30%; */
+  height:  1.6em;
+  padding: 0.1em;
+  line-height:  1.6em;
+  font-size: 1.6em;
 }
 
 .search div button {
-  height: 36px;
-  line-height: 30px;
-  font-size: 30px;
+  height: 1.8em;
+  line-height: 1.6em;
+  font-size: 1.6em;
 }
 
 ul.movies {
@@ -44,15 +43,41 @@ ul.movies {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  border: 1px solid navy; /* TODO REMOVE */
 }
 
 ul.movies li {
   margin: 30px;
-  padding-top: 30px;
-  width: 360px;
-  height: 530px;
+  padding: 60px 20px 0 20px;
+  width: 300px;
+  height: 420px;
   border: 1px solid gray;
   border-radius: 15px;
   text-align: center;
+  text-overflow: ellipsis;
+}
+
+ul.movies li h1 {
+  margin-bottom: 5px;
+  font-size: 1.4em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+ul.movies li h2 {
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+
+ul.movies li img {
+  width: 200px;
+  height: 300px;
+}
+
+.error {
+  width: 70%;
+  margin: 50px auto 0 auto;
+  border: 1px solid red;
+  text-align: center;
+  font-size: 1.8em; 
 }

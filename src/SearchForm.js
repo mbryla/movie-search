@@ -2,13 +2,13 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { fetchMovie } from './redux/actions';
+import { fetchMovies } from './redux/actions';
 
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch) => ({
   dispatchFetchMovie: (title, releaseYear) => {
-    dispatch(fetchMovie(title, releaseYear));
+    dispatch(fetchMovies(title, releaseYear));
   },
 });
 
